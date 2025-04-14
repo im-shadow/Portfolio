@@ -1,57 +1,104 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Portfolio</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        /* Optional: Custom Styles */
+        .bg-dark {
+            background-color: #1a1a1a;
+        }
+    </style>
 </head>
-<body class="bg-gray-900 text-white font-sans">  <!-- Hero Section -->  <section class="min-h-screen flex items-center justify-center text-center">
-    <div>
-      <h1 class="text-4xl md:text-6xl font-bold">Hi, I'm a 14 y.o Developer</h1>
-      <p class="mt-4 text-gray-400 text-lg">I build cool things in silence</p>
-      <div class="mt-6 space-x-4">
-        <a href="#projects" class="bg-indigo-600 px-4 py-2 rounded hover:bg-indigo-500">View Projects</a>
-        <a href="#contact" class="border border-gray-400 px-4 py-2 rounded hover:border-white">Contact Me</a>
-      </div>
-    </div>
-  </section>  <!-- About Section -->  <section class="py-16 px-4 max-w-4xl mx-auto text-center" id="about">
-    <h2 class="text-3xl font-bold mb-4">About Me</h2>
-    <p class="text-gray-400">I'm a self-taught front-end developer who loves programming, silence, and deep thinking. I started coding early and aim to become a professional freelancer and developer while learning everything I can.</p>
-  </section>  <!-- Skills Section -->  <section class="py-16 px-4 max-w-4xl mx-auto" id="skills">
-    <h2 class="text-3xl font-bold mb-6 text-center">Skills</h2>
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-      <div>HTML</div>
-      <div>CSS</div>
-      <div>JavaScript</div>
-      <div>Tailwind</div>
-      <div>Git</div>
-      <div>GitHub</div>
-      <div>VSCode</div>
-      <div>React (learning)</div>
-    </div>
-  </section>  <!-- Projects Section -->  <section class="py-16 px-4 max-w-5xl mx-auto" id="projects">
-    <h2 class="text-3xl font-bold mb-6 text-center">Projects</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-      <!-- Project Card Example -->
-      <div class="bg-gray-800 p-6 rounded shadow">
-        <h3 class="text-xl font-semibold mb-2">Project Name</h3>
-        <p class="text-gray-400 mb-4">Short project description here.</p>
-        <div class="flex justify-between">
-          <a href="#" class="text-indigo-400 hover:underline">Live Demo</a>
-          <a href="#" class="text-indigo-400 hover:underline">GitHub</a>
+
+<body class="bg-gray-900 text-white">
+
+    <!-- Header Section -->
+    <header class="w-full py-8 bg-dark" id="home">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-4xl font-bold">Your Name</h1>
+            <nav>
+                <ul class="flex space-x-8">
+                    <li><a href="#about" class="hover:text-indigo-400">About</a></li>
+                    <li><a href="#projects" class="hover:text-indigo-400">Projects</a></li>
+                    <li><a href="#contact" class="hover:text-indigo-400">Contact</a></li>
+                </ul>
+            </nav>
         </div>
-      </div>
-      <!-- Repeat for more projects -->
-    </div>
-  </section>  <!-- Contact Section -->  <section class="py-16 px-4 max-w-3xl mx-auto text-center" id="contact">
-    <h2 class="text-3xl font-bold mb-4">Contact Me</h2>
-    <p class="text-gray-400 mb-4">Got a project or question? Let's talk.</p>
-    <div>
-      <p>Email: youremail@example.com</p>
-      <p>GitHub: github.com/yourusername</p>
-      <p>Discord: your#1234</p>
-    </div>
-  </section>  <!-- Footer -->  <footer class="py-6 text-center text-gray-500">
-    Coded with silence & coffee — 2025 © YourName
-  </footer></body>
-</html>
+    </header>
+
+    <!-- About Section -->
+    <section class="py-20" id="about" data-aos="fade-up">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-semibold">About Me</h2>
+            <p class="text-gray-400 mt-4">I'm a passionate developer who loves building amazing web applications and learning new technologies.</p>
+            <div class="mt-6">
+                <img src="your-photo.jpg" alt="Your Name" class="rounded-full w-32 h-32 mx-auto">
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="py-20 bg-dark" id="skills" data-aos="fade-up">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-semibold">Skills</h2>
+            <div class="grid grid-cols-3 md:grid-cols-6 gap-8 mt-6">
+                <div>HTML</div>
+                <div>CSS</div>
+                <div>JavaScript</div>
+                <div>React</div>
+                <div>Git</div>
+                <div>Node.js</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="py-20" id="projects" data-aos="fade-up">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-semibold">My Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-6">
+                <!-- Project 1 -->
+                <div class="bg-gray-800 p-6 rounded-lg">
+                    <h3 class="text-xl font-semibold">Project 1</h3>
+                    <p class="text-gray-400 mt-2">Description of your project.</p>
+                    <div class="mt-4 flex justify-between">
+                        <a href="#" class="text-indigo-400 hover:underline">Live Demo</a>
+                        <a href="#" class="text-indigo-400 hover:underline">GitHub</a>
+                    </div>
+                </div>
+                <!-- Repeat for more projects -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-20 bg-dark" id="contact" data-aos="fade-up">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-semibold">Contact Me</h2>
+            <p class="text-gray-400 mt-4">Feel free to reach out to me through any of the platforms below:</p>
+            <div class="mt-6">
+                <p>Email: youremail@example.com</p>
+                <p>GitHub: github.com/yourusername</p>
+                <p>LinkedIn: linkedin.com/in/yourusername</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-6 text-center text-gray-500">
+        Coded with <span class="text-red-500">❤️</span> — 2025 © YourName
+    </footer>
+
+    <!-- AOS JS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+          </html>
